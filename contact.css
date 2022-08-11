@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/FA_cc_codemosh_nobadge.jpg);
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(FA_cc_codemosh_nobadge.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
