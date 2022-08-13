@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body class="light">
+    <div class="leave-button">
+        <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+    <ul class="dropdown">
+        <li class="dropdown-item">
+            <a id="light">Light</a>
+        </li>
+        <li class="dropdown-item">
+            <a id="dark">Dark</a>
+        </li>
+    </ul>
+    <section class="project-container">
+        <div class="project-header">
+            <h1>Project</h1>
+        </div>
+        <div class="project-cards">
+            <div class="card-project">
+                <h1 class="card-name">RedaPro</h1>
+                <div class="card-content">
+                    <p>For this website I have used Html and Css vanilla also some JavaScript,Flex box, Grid box, animations and transitions all uncluded in that web site , if you want a professionnal website don't forget to contact me and let me build to you a professional one.</p>
+                </div>
+                <div class="card-link">
+                    <a href="index.html"><i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        const darkbutton = document.getElementById("dark")
+        const lightbutton = document.getElementById("light")
+        const body = document.body
+        const theme = localStorage.getItem('theme')
+        if (theme) {
+            body.classList.add(theme);
+        }
+
+        darkbutton.onclick = () => {
+            body.classList.replace('light', 'dark')
+            localStorage.setItem('theme', 'dark')
+        }
+
+        lightbutton.onclick = () => {
+            body.classList.replace('dark', 'light')
+            localStorage.setItem('theme', 'light')
+        }
+
+    </script>
+</body>
+</html>

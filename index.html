@@ -42,9 +42,9 @@
                 </a>
             </li>
             <li class="list-item">
-                <a class="link" href="#">
+                <a class="link" href="project.html">
                     <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M528 0h-480C21.5 0 0 21.5 0 48v320C0 394.5 21.5 416 48 416h192L224 464H152C138.8 464 128 474.8 128 488S138.8 512 152 512h272c13.25 0 24-10.75 24-24s-10.75-24-24-24H352L336 416h192c26.5 0 48-21.5 48-48v-320C576 21.5 554.5 0 528 0zM512 288H64V64h448V288z" class="fa-color"/></svg>
-                    <span class="link-text">Our New Web</span>
+                    <span class="link-text">Projects</span>
                 </a>
             </li>
         </ul>
@@ -72,13 +72,13 @@
                 <img src="images/FA_cc_codemosh_nobadge.jpg" alt="">
                 <h1>HTML, CSS Basics</h1>
                 <p>Write your first lignes of code and Get familiare with HTML And CSS.</p>
-                <a href="#">Start</a>
+                <a href="https://www.youtube.com/channel/UCidnbh98M0Sox_LN9iA2I-Q">Start</a>
             </div>
             <div class="card">
                 <img src="images/js1.jpg" alt="">
                 <h1>JavaScript Basics</h1>
                 <p>Write your first lignes of code and Get familiare with JavaScript Programming.</p>
-                <a href="#">Start</a>
+                <a href="https://www.youtube.com/channel/UCidnbh98M0Sox_LN9iA2I-Q">Start</a>
             </div>
         </div>
     </section>
@@ -99,10 +99,9 @@
             </p>
         </div>
         <div class="social">
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.youtube.com/channel/UCidnbh98M0Sox_LN9iA2I-Q"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://www.instagram.com/_redallah_dehbi_/"><i class="fa-brands fa-square-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.facebook.com/redallah.dehbi/"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </section>
 
@@ -114,14 +113,21 @@
         const darkbutton = document.getElementById("dark")
         const lightbutton = document.getElementById("light")
         const body = document.body
+        const theme = localStorage.getItem('theme')
+        if (theme) {
+            body.classList.add(theme);
+        }
 
         darkbutton.onclick = () => {
             body.classList.replace('light', 'dark')
+            localStorage.setItem('theme', 'dark')
         }
 
         lightbutton.onclick = () => {
             body.classList.replace('dark', 'light')
+            localStorage.setItem('theme', 'light')
         }
+
     </script>
 </body>
 </html>
